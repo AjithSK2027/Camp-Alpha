@@ -129,7 +129,7 @@ header.scrolled .menu-trigger span { background: var(--forest-green); }
 
 /* Hero Component with Parallax Layering */
 .hero-stage { width: 100%; height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center; background: #0c100e; }
-.hero-parallax-bg { position: absolute; top: 0; left: 0; width: 100%; height: 120%; background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(28,33,31,0.85)), url('images/hero-bg.jpg'); background-size: cover; background-position: center; will-change: transform; transform: translateY(0); }
+.hero-parallax-bg { position: absolute; top: 0; left: 0; width: 100%; height: 120%; background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(28,33,31,0.85)), url('images/hero-bg.webp'); background-size: cover; background-position: center; will-change: transform; transform: translateY(0); }
 .hero-content-wrapper { position: relative; z-index: 10; width: 100%; text-align: center; color: #FAF8F5; padding: 0 2rem; transform: translateY(20px); opacity: 0; animation: heroEntrance 1.2s cubic-bezier(0.25, 1, 0.5, 1) 0.5s forwards; }
 .hero-title { font-size: clamp(3.5rem, 7vw, 6.5rem); font-weight: 300; letter-spacing: -0.01em; margin-bottom: 1.5rem; line-height: 1.05; color: #FAF8F5; }
 .hero-tagline { font-family: var(--font-sans); font-size: clamp(0.9rem, 2vw, 1.2rem); text-transform: uppercase; letter-spacing: 0.4em; font-weight: 400; color: rgba(250, 248, 245, 0.8); margin-bottom: 3.5rem; }
