@@ -1,0 +1,352 @@
+/* Core Structural Tokens & Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-light: #FBFBFA;
+    --text-dark: #1A1F1C;
+    --text-muted: #555E59;
+    --accent-green: #2A4035;
+    --border-color: #1A1F1C;
+    --font-sans: 'DM Sans', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Typography Overrides */
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+}
+
+/* Navigation Layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4%;
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand-logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+.nav-links .nav-cta {
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 1.2rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-links .nav-cta:hover {
+    background-color: var(--text-dark);
+    color: var(--bg-light);
+    opacity: 1;
+}
+
+/* Hero Component - Editorial Layout */
+.hero-viewport {
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 6%;
+}
+
+.hero-container {
+    max-width: 750px;
+    color: #FFFFFF;
+}
+
+.hero-tagline {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-viewport h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+    color: #FFFFFF;
+}
+
+.hero-viewport p {
+    color: #E2E5E3;
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+}
+
+.action-btn {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 1px solid #FFFFFF;
+    transition: background 0.2s, color 0.2s;
+}
+
+.action-btn:hover {
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+/* Universal Page Sections */
+.content-block {
+    padding: 6rem 6%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.block-header {
+    margin-bottom: 4rem;
+}
+
+.section-meta {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.content-block h2 {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+}
+
+/* Split Accommodations Grid (No drop-shadows, sharp borders) */
+.split-display-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 3rem;
+}
+
+.display-card {
+    border: 1px solid var(--border-color);
+    background: #FFFFFF;
+}
+
+.img-frame {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.display-card:hover .img-frame img {
+    transform: scale(1.03);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-body h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Experiences / Amenities Section (Dark Contrast Zone) */
+.dark-accent {
+    background-color: var(--accent-green);
+    color: #FFFFFF;
+    border-bottom: none;
+}
+
+.dark-accent .section-meta {
+    color: #A3B1A9;
+}
+
+.dark-accent p {
+    color: #C3CBC7;
+}
+
+.amenities-layout-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.amenity-node {
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.03);
+}
+
+.amenity-node img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.node-meta {
+    padding: 1.5rem;
+}
+
+.node-meta h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    color: #FFFFFF;
+}
+
+/* Modern Clean Masonry Gallery Grid */
+.masonry-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    border: 1px solid var(--border-color);
+    height: 260px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Conversion Call-to-Action Section */
+.cta-banner-block {
+    padding: 6rem 6%;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cta-box-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid var(--border-color);
+    padding: 4rem 2rem;
+    background-color: #FFFFFF;
+}
+
+.cta-box-wrapper h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-box-wrapper p {
+    margin-bottom: 2.5rem;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.whatsapp-cta-link {
+    display: inline-block;
+    background-color: var(--text-dark);
+    color: var(--bg-light);
+    text-decoration: none;
+    padding: 1.2rem 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.whatsapp-cta-link:hover {
+    background-color: var(--accent-green);
+}
+
+/* Footer Element */
+.footer-bar {
+    padding: 3rem 6%;
+    background-color: var(--bg-light);
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.brand-foot {
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.copyright {
+    font-size: 0.9rem;
+}
+
+/* Responsiveness Adaptations */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    .nav-links a {
+        margin: 0 0.75rem;
+    }
+    .content-block {
+        padding: 4rem 4%;
+    }
+    .cta-box-wrapper {
+        padding: 2.5rem 1rem;
+    }
+}
