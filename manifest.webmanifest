@@ -1,0 +1,17 @@
+{
+  "name": "Camp Alpha Luxury Homestay",
+  "short_name": "Camp Alpha",
+  "description": "Boutique Luxury Riverside Coffee Estate Homestay in Chikmagalur",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#FAF8F5",
+  "theme_color": "#1A3A2B",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
