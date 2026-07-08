@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Media Album | Camp Alpha Chikmagalur</title>
+    <meta name="description" content="Browse our high-resolution visual lookbook capturing luxury living rooms, pristine natural mountain streams, and the private coffee plantations of Camp Alpha.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="https://campalpha.in/gallery.html">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">CAMP ALPHA</a>
+            <nav role="navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="stay.html" class="nav-link">Stay</a></li>
+                    <li><a href="experiences.html" class="nav-link">Experiences</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-controls"><button id="theme-toggle-btn" class="theme-toggle">🌙</button></div>
+        </div>
+    </header>
+
+    <main style="padding-top: var(--header-height);">
+        <section class="container reveal-on-scroll">
+            <span class="uppercase-tracking">Visual Album</span>
+            <h1 class="section-headline">The Lookbook of Estate Elegance</h1>
+            
+            <div class="gallery-showcase-grid" style="margin-top:4rem;">
+                <div class="gallery-item gi-span-6"><img src="images/gallery-1.jpg" alt="Visual Canvas Frame Component 1"></div>
+                <div class="gallery-item gi-span-3"><img src="images/gallery-2.jpg" alt="Visual Canvas Frame Component 2"></div>
+                <div class="gallery-item gi-span-3"><img src="images/amenity-dining.jpg" alt="Visual Canvas Frame Component 3"></div>
+                <div class="gallery-item gi-span-3"><img src="images/amenity-snooker.jpg" alt="Visual Canvas Frame Component 4"></div>
+                <div class="gallery-item gi-span-3"><img src="images/amenity-trek.jpg" alt="Visual Canvas Frame Component 5"></div>
+                <div class="gallery-item gi-span-6"><img src="images/gallery-4.jpg" alt="Visual Canvas Frame Component 6"></div>
+            </div>
+        </section>
+
+        <div id="lightbox-overlay" role="dialog" aria-hidden="true">
+            <div class="lightbox-frame">
+                <button id="lightbox-close-btn" class="lightbox-close">✕ CLOSE</button>
+                <img id="lightbox-img" src="" alt="Active Modal Target Frame View">
+            </div>
+        </div>
+    </main>
+
+    <footer class="master-footer-node"><div class="container text-center" style="font-size:0.85rem; color:rgba(250,248,245,0.4);"><p>&copy; 2026 Camp Alpha.</p></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>
