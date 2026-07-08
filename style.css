@@ -1,4 +1,4 @@
-/* Core Structural Tokens & Resets */
+/* Core Styling Variables */
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +7,11 @@
 
 :root {
     --bg-light: #FBFBFA;
-    --text-dark: #1A1F1C;
-    --text-muted: #555E59;
-    --accent-green: #2A4035;
-    --border-color: #1A1F1C;
+    --text-dark: #141715;
+    --text-muted: #5C6460;
+    --accent-green: #1F362B;
+    --wa-green: #25D366;
+    --border-color: #141715;
     --font-sans: 'DM Sans', sans-serif;
     --font-serif: 'Playfair Display', serif;
 }
@@ -22,11 +23,11 @@ html {
     color: var(--text-dark);
 }
 
-/* Typography Overrides */
-h1, h2, h3 {
+/* Typography Rules */
+h1, h2, h3, h4 {
     font-family: var(--font-serif);
-    font-weight: 600;
-    line-height: 1.2;
+    font-weight: 700;
+    line-height: 1.15;
 }
 
 p {
@@ -35,21 +36,40 @@ p {
     color: var(--text-muted);
 }
 
+/* Desk Top Communication Row */
+.top-utility-bar {
+    background-color: var(--text-dark);
+    padding: 0.5rem 6%;
+}
+
+.utility-wrap {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.util-link {
+    color: #E6EAE7;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
 /* Navigation Layout */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 4%;
+    padding: 1.5rem 6%;
     background-color: var(--bg-light);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 999;
 }
 
 .brand-logo {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-decoration: none;
@@ -62,28 +82,24 @@ p {
     margin-left: 2rem;
     font-size: 0.95rem;
     font-weight: 500;
-    transition: opacity 0.2s;
-}
-
-.nav-links a:hover {
-    opacity: 0.7;
 }
 
 .nav-links .nav-cta {
     border: 1px solid var(--border-color);
-    padding: 0.6rem 1.2rem;
-    transition: background 0.2s, color 0.2s;
+    padding: 0.6rem 1.4rem;
+    background-color: var(--text-dark);
+    color: #FFFFFF;
+    transition: all 0.2s;
 }
 
 .nav-links .nav-cta:hover {
-    background-color: var(--text-dark);
-    color: var(--bg-light);
-    opacity: 1;
+    background-color: transparent;
+    color: var(--text-dark);
 }
 
-/* Hero Component - Editorial Layout */
+/* Hero Section */
 .hero-viewport {
-    height: 85vh;
+    height: 80vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -92,50 +108,59 @@ p {
 }
 
 .hero-container {
-    max-width: 750px;
-    color: #FFFFFF;
+    max-width: 800px;
 }
 
 .hero-tagline {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     display: block;
     margin-bottom: 1rem;
+    color: #FFFFFF;
     font-weight: 700;
 }
 
 .hero-viewport h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
     margin-bottom: 1.5rem;
     color: #FFFFFF;
 }
 
 .hero-viewport p {
-    color: #E2E5E3;
+    color: #E3E8E5;
     font-size: 1.25rem;
     margin-bottom: 2.5rem;
-    max-width: 600px;
+    max-width: 650px;
 }
 
-.action-btn {
-    display: inline-block;
-    background-color: #FFFFFF;
-    color: var(--text-dark);
-    text-decoration: none;
+.hero-cta-group {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.action-btn-primary, .action-btn-whatsapp {
     padding: 1rem 2rem;
     font-weight: 700;
+    text-decoration: none;
     font-size: 1rem;
+    text-align: center;
+}
+
+.action-btn-primary {
+    background-color: #FFFFFF;
+    color: var(--text-dark);
     border: 1px solid #FFFFFF;
-    transition: background 0.2s, color 0.2s;
 }
 
-.action-btn:hover {
-    background-color: transparent;
+.action-btn-whatsapp {
+    background-color: var(--wa-green);
     color: #FFFFFF;
+    border: 1px solid var(--wa-green);
 }
 
-/* Universal Page Sections */
+/* General Layout Blocks */
 .content-block {
     padding: 6rem 6%;
     border-bottom: 1px solid var(--border-color);
@@ -155,13 +180,13 @@ p {
 }
 
 .content-block h2 {
-    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-size: clamp(2rem, 3.5vw, 2.6rem);
 }
 
-/* Split Accommodations Grid (No drop-shadows, sharp borders) */
+/* Split Accommodations Grid */
 .split-display-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 3rem;
 }
 
@@ -172,7 +197,7 @@ p {
 
 .img-frame {
     width: 100%;
-    height: 300px;
+    height: 320px;
     overflow: hidden;
     border-bottom: 1px solid var(--border-color);
 }
@@ -181,36 +206,26 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.display-card:hover .img-frame img {
-    transform: scale(1.03);
 }
 
 .card-body {
-    padding: 2rem;
+    padding: 2.5rem;
 }
 
 .card-body h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
 }
 
-/* Experiences / Amenities Section (Dark Contrast Zone) */
+/* Dark Accent Zone */
 .dark-accent {
     background-color: var(--accent-green);
     color: #FFFFFF;
     border-bottom: none;
 }
 
-.dark-accent .section-meta {
-    color: #A3B1A9;
-}
-
-.dark-accent p {
-    color: #C3CBC7;
-}
+.dark-accent .section-meta { color: #A4B2AA; }
+.dark-accent p { color: #CCD4D0; }
 
 .amenities-layout-row {
     display: grid;
@@ -219,8 +234,8 @@ p {
 }
 
 .amenity-node {
-    border: 1px solid rgba(255,255,255,0.2);
-    background-color: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.15);
+    background-color: rgba(255,255,255,0.02);
 }
 
 .amenity-node img {
@@ -228,125 +243,171 @@ p {
     height: 240px;
     object-fit: cover;
     display: block;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
-.node-meta {
-    padding: 1.5rem;
+.node-meta { padding: 1.5rem; }
+.node-meta h3 { color: #FFFFFF; margin-bottom: 0.5rem;}
+
+/* Lead Booking Panel Structure */
+.booking-bg {
+    background-color: #F1F3F2;
 }
 
-.node-meta h3 {
-    font-size: 1.35rem;
-    margin-bottom: 0.75rem;
-    color: #FFFFFF;
-}
-
-/* Modern Clean Masonry Gallery Grid */
-.masonry-gallery {
+.booking-grid-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.booking-text-panel p {
+    margin: 1.5rem 0 2.5rem;
+}
+
+.direct-channels {
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
 }
 
-.gallery-item {
+.channel-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
     border: 1px solid var(--border-color);
-    height: 260px;
-    overflow: hidden;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-/* Conversion Call-to-Action Section */
-.cta-banner-block {
-    padding: 6rem 6%;
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.cta-box-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    border: 1px solid var(--border-color);
-    padding: 4rem 2rem;
+    text-decoration: none;
+    color: var(--text-dark);
     background-color: #FFFFFF;
 }
 
-.cta-box-wrapper h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.channel-card .icon {
+    font-size: 2rem;
 }
 
-.cta-box-wrapper p {
-    margin-bottom: 2.5rem;
-    max-width: 550px;
-    margin-left: auto;
-    margin-right: auto;
+.channel-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
 }
 
-.whatsapp-cta-link {
-    display: inline-block;
-    background-color: var(--text-dark);
-    color: var(--bg-light);
-    text-decoration: none;
-    padding: 1.2rem 2.5rem;
+.channel-card p {
+    margin: 0;
     font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    font-size: 0.95rem;
-    transition: background-color 0.2s;
 }
 
-.whatsapp-cta-link:hover {
-    background-color: var(--accent-green);
+.wa-card:hover {
+    background-color: var(--wa-green);
+    color: #FFFFFF;
+    border-color: var(--wa-green);
+}
+.wa-card:hover p, .wa-card:hover h4 { color: #FFFFFF; }
+
+/* Booking Engine Form Panels */
+.booking-form-panel {
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    padding: 3rem;
 }
 
-/* Footer Element */
-.footer-bar {
-    padding: 3rem 6%;
-    background-color: var(--bg-light);
-}
-
-.footer-wrap {
+.lead-form {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 1.5rem;
 }
 
-.brand-foot {
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.85rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.copyright {
-    font-size: 0.9rem;
+.form-group input, .form-group select, .form-group textarea {
+    padding: 0.85rem;
+    border: 1px solid #C5CBC7;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    background-color: var(--bg-light);
 }
 
-/* Responsiveness Adaptations */
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--text-dark);
+}
+
+.submit-form-btn {
+    background-color: var(--text-dark);
+    color: #FFFFFF;
+    padding: 1.2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.2s;
+}
+
+.submit-form-btn:hover {
+    background-color: var(--accent-green);
+}
+
+/* Footer layout */
+.footer-bar { padding: 4rem 6% 8rem; }
+.footer-wrap { display: flex; justify-content: space-between; align-items: center; }
+.brand-foot { font-weight: 700; letter-spacing: 0.1em; }
+
+/* Mobile Only Interaction Elements */
+.mobile-action-dock {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    z-index: 1000;
+    grid-template-columns: 1fr 1fr;
+    border-top: 2px solid var(--border-color);
+}
+
+.dock-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.dock-call { background-color: var(--text-dark); }
+.dock-wa { background-color: var(--wa-green); }
+
+/* Absolute Responsive Viewport Interceptions */
+@media (max-width: 992px) {
+    .booking-grid-layout { grid-template-columns: 1fr; gap: 3rem; }
+}
+
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-    .nav-links a {
-        margin: 0 0.75rem;
-    }
-    .content-block {
-        padding: 4rem 4%;
-    }
-    .cta-box-wrapper {
-        padding: 2.5rem 1rem;
-    }
+    .top-utility-bar { display: none; }
+    .navbar { padding: 1.2rem 4%; }
+    .nav-links { display: none; } /* Kept clean for simple conversion focus on mobile landing */
+    .hero-viewport { padding: 0 4%; }
+    .content-block { padding: 4rem 4%; }
+    .booking-form-panel { padding: 1.5rem; }
+    .form-row { grid-template-columns: 1fr; gap: 1.5rem; }
+    .mobile-action-dock { display: grid; }
 }
