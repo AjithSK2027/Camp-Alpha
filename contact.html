@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concierge Direct Booking Desk | Camp Alpha</title>
+    <meta name="description" content="Reach our high-tier reservation desk directly. Submit check-in schedules for your corporate retreat, couple holiday, or luxury camping adventure in Chikmagalur.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="https://campalpha.in/contact.html">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">CAMP ALPHA</a>
+            <nav role="navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="stay.html" class="nav-link">Stay</a></li>
+                    <li><a href="experiences.html" class="nav-link">Experiences</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-controls"><button id="theme-toggle-btn" class="theme-toggle">🌙</button></div>
+        </div>
+    </header>
+
+    <main style="padding-top: var(--header-height);">
+        <section class="container reveal-on-scroll">
+            <!-- Directly embeds the premium validation form block for focused high conversion utility -->
+            <div class="form-layout-grid" style="margin-top: 2rem;">
+                <div class="contact-meta-card">
+                    <span class="uppercase-tracking">Secure Connectivity</span>
+                    <h1>Coordinate Your Arrival Details</h1>
+                    <p>Have specialized configuration parameters, enterprise team structural specifications, or private transport requests? Share them with us, and our head concierge will arrange your bespoke itinerary.</p>
+                    
+                    <ul class="contact-methods-listing">
+                        <li class="method-item-node"><span>Voice Verification Desk</span><a href="tel:+917483717675">+91 7483717675</a></li>
+                        <li class="method-item-node"><span>Digital Dispatch Channel</span><a href="mailto:alphacamp.ckm@gmail.com">alphacamp.ckm@gmail.com</a></li>
+                    </ul>
+                </div>
+
+                <form id="camp-alpha-booking-form" class="premium-booking-form" action="https://formsubmit.co/alphacamp.ckm@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="field-element-wrapper">
+                        <label for="form-name">Full Client Name *</label>
+                        <input type="text" id="form-name" name="Guest Name" required placeholder="Devendra Nath">
+                    </div>
+                    <div class="input-group-row">
+                        <div class="field-element-wrapper">
+                            <label for="form-phone">Mobile Identity *</label>
+                            <input type="tel" id="form-phone" name="Phone Number" required placeholder="+91 98450 00000">
+                        </div>
+                        <div class="field-element-wrapper">
+                            <label for="form-email">Electronic Mail *</label>
+                            <input type="email" id="form-email" name="Email Address" required placeholder="nath@venture.com">
+                        </div>
+                    </div>
+                    <div class="field-element-wrapper">
+                        <label for="form-message">Detailed Requirements</label>
+                        <textarea id="form-message" name="Custom Instructions" rows="5" placeholder="Detail any specific arrangements or dietary requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-premium btn-orange">Transmit Booking Parameters</button>
+                </form>
+            </div>
+        </section>
+
+        <div id="success-modal" class="notification-modal-overlay" role="dialog" aria-hidden="true">
+            <div class="success-modal-card">
+                <h3>Request Synchronized</h3>
+                <p>Your secure verification transmission parameters have been routed directly to our chief client curator. Anticipate clear correspondence momentarily.</p>
+                <button id="modal-close-btn" class="btn-premium btn-primary">Return to Exploration</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="master-footer-node"><div class="container text-center" style="font-size:0.85rem; color:rgba(250,248,245,0.4);"><p>&copy; 2026 Camp Alpha Resorts Private Ltd.</p></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>
